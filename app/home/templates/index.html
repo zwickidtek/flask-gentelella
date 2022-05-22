@@ -144,42 +144,12 @@
 
       <div class="">
         <ul class="to_do">
+          {% for item in todo[:6] %}
           <li>
             <p>
-              <input type="checkbox" class="flat"> Schedule meeting with new client </p>
+              <input type="checkbox" class="flat"> {{item}} </p>
           </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Create email address for new intern</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Create email address for new intern</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-          </li>
-          <li>
-            <p>
-              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
