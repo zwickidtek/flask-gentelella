@@ -347,23 +347,23 @@ if (typeof NProgress != 'undefined') {
 		
 		
 		var arr_data1 = [
-			[gd(2012, 1, 1), 17],
-			[gd(2012, 1, 2), 74],
-			[gd(2012, 1, 3), 6],
-			[gd(2012, 1, 4), 39],
-			[gd(2012, 1, 5), 20],
-			[gd(2012, 1, 6), 85],
-			[gd(2012, 1, 7), 7]
+			// [gd(2012, 1, 1), 17],
+			// [gd(2012, 1, 2), 74],
+			// [gd(2012, 1, 3), 6],
+			// [gd(2012, 1, 4), 39],
+			// [gd(2012, 1, 5), 20],
+			// [gd(2012, 1, 6), 85],
+			// [gd(2012, 1, 7), 7]
 		];
 
 		var arr_data2 = [
-		  [gd(2012, 1, 1), 82],
-		  [gd(2012, 1, 2), 23],
-		  [gd(2012, 1, 3), 66],
-		  [gd(2012, 1, 4), 9],
-		  [gd(2012, 1, 5), 119],
-		  [gd(2012, 1, 6), 6],
-		  [gd(2012, 1, 7), 9]
+		//   [gd(2012, 1, 1), 82],
+		//   [gd(2012, 1, 2), 23],
+		//   [gd(2012, 1, 3), 66],
+		//   [gd(2012, 1, 4), 9],
+		//   [gd(2012, 1, 5), 119],
+		//   [gd(2012, 1, 6), 6],
+		//   [gd(2012, 1, 7), 9]
 		];
 		
 		var arr_data3 = [
@@ -772,9 +772,9 @@ if (typeof NProgress != 'undefined') {
 		
 		if ($('#gauge-text').length){ 
 		
-			chart_gauge_01.maxValue = 6000;
+			chart_gauge_01.maxValue = 100000;
 			chart_gauge_01.animationSpeed = 32;
-			chart_gauge_01.set(3200);
+			chart_gauge_01.set(18000);
 			chart_gauge_01.setTextField(document.getElementById("gauge-text"));
 		
 		}
