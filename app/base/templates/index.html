@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% block title %}
+Enzo
+{% endblock %}
+{% block content %}
+<style>
+    .hero{ display: -ms-grid; display: grid; text-align: center; padding: 2.5vw; background-color: #C8C6C6;}
+    .content{color: black;  height: 77vh; padding-top: 30vh;}
+    .getdown{color: #22577A; font-size: 3vw;}
+    .engage {display: -webkit-box; display: -ms-flexbox; display: flex;
+    font-size: 2vw; margin: 0 auto; width: 25em; font-weight: 400;}
+    .scroll{width: 30px; margin-bottom: 2vw; display: block !important; margin: auto; color: black;}
+    .circle {animation: circleAnim 1s infinite alternate-reverse;}
+    .features-title-left {font-size: 2vw; padding-top: 4vw; text-align: left; color: black; margin-left: 8vw; vertical-align : middle; margin-top: 3vw;}
+    .features-desc-left {vertical-align : middle; text-align: center; color: #FDF0D5 !important; padding-top: .8vw; line-height: 1.6; margin-left: 3vw; font-size: 1.4vw; width: 30vw; margin-top: 1vw;}
+    .featured-img-right {float: right; text-align: right !important; margin-top: 5.5vw; margin-right: 13vw; max-height: 40%; max-width:40%;}
+    .features-title-right {font-size: 2vw; padding-top: 4vw; text-align: right; color: black; margin-right: 13vw; vertical-align : middle; margin-top: 3vw;}
+    .features-desc-right {vertical-align : middle; text-align: center; color: #FDF0D5 !important; padding-top: .8vw; line-height: 1.6; margin-right: 8vw; font-size: 1.4vw; width: 30vw; margin-top: 1vw;}
+    .featured-img-left {float: left; text-align: left !important; margin-top: 5.5vw; margin-left: 8vw; max-height: 40%; max-width:40%;}
+    .calltoaction{background-color: #FDF0D5; text-align: center; color: black; padding-top: 8.5vw;}
+    .letsdothis{font-size: 2.4vw; padding-bottom: .8vw;}
+    .every{font-size:1.6vw;}
+    .pickaplan{padding-top: 2vw; padding-bottom: 4vw;}
+    button { width: 14vw; height: 4vw; background-color: #22577A; color: white; text-align: center; font-size: 2vw; border: solid ##22577A; border-radius: 15px; transition-duration: 0.4s;}
+    button:hover {opacity: 90%; font-weight:600;}
+
+
+    @-webkit-keyframes circleAnim {from {-webkit-transform: translate(262px, 798px);
+            transform: translate(262px, 798px); z-index: 5;}
+    to {-webkit-transform: translate(262px, 830px);
+            transform: translate(262px, 830px);}}
+
+    @keyframes circleAnim {
+    from {-webkit-transform: translate(262px, 798px);
+            transform: translate(262px, 798px); z-index: 5;}
+    to {-webkit-transform: translate(262px, 830px);
+            transform: translate(262px, 830px);}}
+</style>
+<div class="hero">
+    <table class="front-page">
+    <tr>
+        <td>
+        <div class="logo">
+        <img src="{{url_for('static',filename = 'images/EnzoWhite.png')}}" alt="Logo" style="max-width:60%;">
+    </div>
+        </td>
+        <td>
+    <!-- <div class="content" style="width: 100%;">
+        <h1 class="stagger1 getdown transition3"> Get down to business and grow sales.</h1>
+        <br>
+        <br>
+        <br>
+        <p class="engage">Engage your customers, boost your dealership, and close more deals in less time.</p>
+    </div> -->
+    </td>
+    </tr>
+    </table>
+    <div class="scroll-anim">
+        <a href="#slide">
+                <svg class="scroll stagger1 filter-black" width="40" height="77" viewBox="0 0 40 77">
+                <g id="scroll" transform="translate(-253 -787)">
+                  <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)" fill="none" stroke="#22577A" stroke-width="5">
+                    <rect width="40" height="77" rx="20" stroke="none"/>
+                    <rect x="2" y="2" width="36" height="73" rx="18" fill="none"/>
+                  </g>
+                  <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(262 798)" fill="#22577A"/>
+                </g>
+              </svg>
+            </a>
+    </div>
+</div>
+<div>
+    <section class="features" style="background-color: #22577A; opacity: 90%; padding-bottom: 10vw;">
+    <h1 style="text-align: center; color: #FDF0D5 !important; font-size: 5vw; padding-top: 2vw;">Do it all with Enzo</h1>
+    <h4 class="engage" style="text-align: center; color: black; padding-top: .7vw; line-height: 1.5"> Bring audience data, marketing channels, and insights together to reach your goals faster</h4>
+    <table style="margin-top: 3vw; width: 100%;">
+        <tr>
+            <a id="slide"></a>
+            <td style="width: 50%;" class="transition2">
+                <h3 class="features-title-left"> Connect your dealership</h3>
+                <h4 class="features-desc-left" >Make the right listings on all the right channels. Build emails, social ads, and more all from one place</h4>
+            </td>
+            <td align="right">
+                <img src="https://i.ibb.co/pKfqdZM/connectyourdealership.jpg" alt="connectyourdealership" class="featured-img-right">
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; margin-top: 5vw;">
+                <img src="https://i.ibb.co/WvzygKh/reachtheright.png" alt="reachtheright" class="featured-img-left">
+            </td>
+
+            <td align="right" class="transition2">
+                <h3 class="features-title-right"> Reach the right people</h3>
+                <h4 class="features-desc-right" >Put your audience at the heart of your marketing with tools that help you to get to know your audience and see who you should be talking to.</h4>
+            </td>
+        </tr>
+        <tr>
+        <td style="width: 50%;" class="transition2">
+            <h3 class="features-title-left"> Create better listings</h3>
+            <h4 class="features-desc-left" >Let your brand shine through with flexible templates. Our AI-Powered listing assistant will generate custom descriptions for you in seconds</h4>
+        </td>
+        <td align="right">
+            <img src="https://i.ibb.co/bzqJ5g5/ailistings.jpg" alt="createbetterlistings" class="featured-img-right" style="width: 45% !important; height: 45% !important;">
+        </td>
+        </tr>
+        <tr>
+         <td style="width: 50%; margin-top: 5vw;">
+            <img src="https://i.ibb.co/whnSRk1/automateyourmark.png" alt="automateoutreach" class="featured-img-left">
+        </td>
+        <td align="right" class="transition2">
+            <h3 class="features-title-right"> Automate your out-reach</h3>
+            <h4 class="features-desc-right" >Add a personal touch without the personal effort through automated messages that reach your customers at exactly the right moments.</h4>
+        </td>
+        </tr>
+        <tr>
+            <td style="width: 50%;" class="transition2">
+            <h3 class="features-title-left" style="margin-left: 6vw !important;"> Take action with our insights</h3>
+            <h4 class="features-desc-left" >With all your data and insights in one place, you can see what's working best and get recommendations to help you do more of it.</h4>
+        </td>
+        <td align="right">
+            <img src="https://i.ibb.co/GJtt6cF/dataanalysis.webp" alt="dataanalysis" class="featured-img-right">
+        </td>
+        </tr>
+    </table>
+    </section>
+</div>
+<section class="calltoaction">
+<div class="cta-text">
+    <h1 class="letsdothis">Let's do this</h1>
+    <h3 class="every">Every big idea starts with a small step.</h3>
+</div>
+<div class="pickaplan" >
+    <button class="transition3" type="button" style="color:#FDF0D5;" onclick="window.location.href= '#';">View Plans</button>
+</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline();
+
+    tl.from('.scroll',{
+    opacity: 0,
+    y: -50,
+    stagger: .3,
+    ease: Power4.easeOut,
+    duration: 2
+    }, "-=1")
+
+    gsap.from('.transition2', {
+        scrollTrigger: {
+            trigger: '.transition2',
+            start: "top bottom"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 2,
+        stagger: .5
+        })
+
+    gsap.from(".transition3", {
+            scrollTrigger: {
+                    trigger: '.transition3',
+                    start: "top bottom"
+                },
+            stagger: .2,
+            scale: 0.1,
+            duration: 1,
+            ease: Back.easeOut.config(1.7)
+        })
+</script>
+{% endblock %}
