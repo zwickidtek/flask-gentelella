@@ -15,7 +15,7 @@ from app.base.models import User
 
 @blueprint.route('/')
 def route_default():
-    return redirect(url_for('base_blueprint.login'))
+    return render_template('landingpage.html')
 
 
 @blueprint.route('/<template>')
@@ -47,7 +47,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and checkpw(password.encode('utf8'), user.password):
             login_user(user)
-            return redirect(url_for('base_blueprint.route_default'))
+            return redirect(url_for('home_blueprint.index'))
         return render_template('errors/page_403.html')
     if not current_user.is_authenticated:
         return render_template(
@@ -65,6 +65,9 @@ def create_user():
     db.session.commit()
     return jsonify('success')
 
+@blueprint.route('/packages_page')
+def packages_page():
+    return render_template('pricing.html')
 
 @blueprint.route('/logout')
 @login_required

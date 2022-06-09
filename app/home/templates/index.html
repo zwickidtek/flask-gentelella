@@ -119,7 +119,7 @@
 
 
 <!-- Start to do list -->
-<div class="col-md-6 col-sm-6 col-xs-12">
+<!-- <div class="col-md-6 col-sm-6 col-xs-12">
   <div class="x_panel">
     <div class="x_title">
       <h2>To Do List <small>Sample tasks</small></h2>
@@ -154,7 +154,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- End to do list -->
 
 
@@ -394,7 +394,7 @@
               </ul>
 
               <div class="sidebar-widget">
-                  <h4>Target Dollars</h4>
+                  <h4>Target Online Sales</h4>
                   <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
                   <div class="goal-wrapper">
                     <span id="gauge-text" class="gauge-value pull-left">0</span>
@@ -406,14 +406,10 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-6 col-sm-4 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Recent Activities <small>Sessions</small></h2>
+            <h2>Recent Sessions <small></small></h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -448,62 +444,26 @@
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="block">
-                    <div class="block_content">
-                      <h2 class="title">
-                                        <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                    </h2>
-                      <div class="byline">
-                        <span>13 hours ago</span> by <a>Jane Smith</a>
-                      </div>
-                      <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="block">
-                    <div class="block_content">
-                      <h2 class="title">
-                                        <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                    </h2>
-                      <div class="byline">
-                        <span>13 hours ago</span> by <a>Jane Smith</a>
-                      </div>
-                      <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="block">
-                    <div class="block_content">
-                      <h2 class="title">
-                                        <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                    </h2>
-                      <div class="byline">
-                        <span>13 hours ago</span> by <a>Jane Smith</a>
-                      </div>
-                      <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                      </p>
-                    </div>
-                  </div>
-                </li>
+                
               </ul>
             </div>
           </div>
         </div>
+    </div>
+
+    <div class="row">
+
+      
       </div>
 
-      <div class="col-md-8 col-sm-8 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
 
         <div class="row">
 
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
               <div class="x_title">
-                <h2>Visitors location <small>geo-presentation</small></h2>
+                <h2>Visitors location <small></small></h2>
                 <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                   </li>
@@ -551,7 +511,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <div id="world-map-gdp" class="col-md-8 col-sm-12 col-xs-12" style="height:230px;"></div>
+                  <div id="usa_map" class="col-md-8 col-sm-12 col-xs-12" style="height:230px;"></div>
                 </div>
               </div>
             </div>
@@ -631,7 +591,7 @@
            End to do list -->
 
           <!-- start of weather widget -->
-          <div class="col-md-6 col-sm-6 col-xs-12">
+          <!-- <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="x_panel">
               <div class="x_title">
                 <h2>Daily active users <small>Sessions</small></h2>
@@ -735,7 +695,7 @@
               </div>
             </div>
 
-          </div>
+          </div> -->
           <!-- end of weather widget -->
         </div>
       </div>
@@ -767,4 +727,6 @@
   <script src="{{ url_for('static', filename='vendors/jqvmap/dist/jquery.vmap.js') }}"></script>
   <script src="{{ url_for('static', filename='vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
   <script src="{{ url_for('static', filename='vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
-{% endblock javascripts %}
+  <script src="{{ url_for('static', filename='vendors/jqvmap/dist/maps/jquery.vmap.usa.js') }}"></script>
+
+  {% endblock javascripts %}
